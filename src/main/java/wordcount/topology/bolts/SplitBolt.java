@@ -38,6 +38,7 @@ public class SplitBolt extends BaseRichBolt {
                     outputCollector.emit(input, values);
                 }
             }
+            System.out.println("----------------------------------------------------------");
             outputCollector.ack(input);
         } catch (Exception e) {
             System.err.println("Failed to parse JSON: " + json);

@@ -1,0 +1,50 @@
+{"id": 1, "text": "1 CRITICAL failure detected in the database shard."}
+{"id": 2, "text": "2 Kafka is a distributed event streaming platform."}
+{"id": 3, "text": "3 The system experienced a CRITICAL memory leak."}
+{"id": 4, "text": "4 Real-time analytics is essential for modern e-commerce."}
+{"id": 5, "text": "5 ERROR: topology failed to deploy on worker node 5."}
+{"id": 6, "text": "6 Fields grouping ensures the same word goes to the same bolt."}
+{"id": 7, "text": "7 A CRASH was reported in the user authentication service."}
+{"id": 8, "text": "8 Kafka topics are divided into multiple partitions for scaling."}
+{"id": 9, "text": "9 System FAILURE observed during the nightly backup process."}
+{"id": 10, "text": "10 Java 8 is still widely used in many big data systems."}
+{"id": 11, "text": "11 DANGER: High CPU usage detected on the lead broker."}
+{"id": 12, "text": "12 GitHub CLI makes pushing code easier without PAT tokens."}
+{"id": 13, "text": "13 A CRITICAL security patch is required for the gateway."}
+{"id": 14, "text": "14 Apple Silicon Macs require specific native library versions."}
+{"id": 15, "text": "15 Application CRASH detected due to null pointer exception."}
+{"id": 16, "text": "16 Tuple anchoring allows Storm to track message completion."}
+{"id": 17, "text": "17 Serious ERROR found in the payment processing logic."}
+{"id": 18, "text": "18 Data engineering involves building robust data pipelines."}
+{"id": 19, "text": "19 Network FAILURE interrupted the stream from the producer."}
+{"id": 20, "text": "20 Scalability is the ability to handle more load by adding resources."}
+{"id": 21, "text": "21 CRITICAL error: Disk space is running low on /tmp."}
+{"id": 22, "text": "22 High throughput means processing many records per second."}
+{"id": 23, "text": "23 Logic CRASH in the count bolt caused the task to restart."}
+{"id": 24, "text": "24 The SplitBolt tokenizes strings into individual words."}
+{"id": 25, "text": "25 Total FAILURE of the zookeeper session was detected."}
+{"id": 26, "text": "26 Big Billion Days at Flipkart generate massive traffic peaks."}
+{"id": 27, "text": "27 System DANGER: temperature in data center B is rising."}
+{"id": 28, "text": "28 Batch processing works on fixed datasets at scheduled times."}
+{"id": 29, "text": "29 A CRITICAL timeout occurred while waiting for Kafka acks."}
+{"id": 30, "text": "30 At-least-once processing ensures no data is ever lost."}
+{"id": 31, "text": "31 Heartbeat FAILURE: supervisor is not responding."}
+{"id": 32, "text": "32 A bolt processes input streams and produces new streams."}
+{"id": 33, "text": "33 CRASH report: The JVM ran out of heap space."}
+{"id": 34, "text": "34 Shuffle grouping distributes tuples randomly across tasks."}
+{"id": 35, "text": "35 Runtime ERROR: version mismatch in the storm-core jar."}
+{"id": 36, "text": "36 Direct grouping allows the sender to choose the recipient."}
+{"id": 37, "text": "37 DANGER: Unauthorized access attempt on the input topic."}
+{"id": 38, "text": "38 A worker process executes a subset of the topology."}
+{"id": 39, "text": "39 CRITICAL bottleneck detected in the count bolt logic."}
+{"id": 40, "text": "40 Supervisor manages the worker processes on a node."}
+{"id": 41, "text": "41 Pipeline FAILURE: The source file data.jsonl is missing."}
+{"id": 42, "text": "42 The offset is a unique identifier for a message in a partition."}
+{"id": 43, "text": "43 Process CRASH: The operating system killed the worker."}
+{"id": 44, "text": "44 Log compaction retains only the last value for each key."}
+{"id": 45, "text": "45 Logic ERROR: Negative word count values are not allowed."}
+{"id": 46, "text": "46 Producer acks ensure the broker received the message."}
+{"id": 47, "text": "47 DANGER: Partition leader is unavailable for word-input."}
+{"id": 48, "text": "48 Microservices communicate through event-driven architectures."}
+{"id": 49, "text": "49 CRITICAL bug found in the message serialization layer."}
+{"id": 50, "text": "50 Cloud computing provides elastic resources on demand."}

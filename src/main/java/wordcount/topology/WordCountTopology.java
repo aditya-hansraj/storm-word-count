@@ -6,6 +6,7 @@ import org.apache.storm.kafka.spout.KafkaSpout;
 import org.apache.storm.kafka.spout.KafkaSpoutConfig;
 import org.apache.storm.topology.TopologyBuilder;
 import org.apache.storm.tuple.Fields;
+import wordcount.topology.bolts.AlertBolt;
 import wordcount.topology.bolts.CountBolt;
 import wordcount.topology.bolts.SplitBolt;
 import wordcount.util.ConfigLoader;
@@ -36,6 +37,10 @@ public class WordCountTopology {
         // 6. Register the Count Bolt (Parallelism from config) with fields grouping on "word"
         builder.setBolt("count-bolt", new CountBolt(), loader.getIntProperty("topology.parallelism.counter"))
                 .fieldsGrouping("split-bolt", new Fields("word"));
+
+        // 7. Register the Alert Bolt (Parallelism = 1) with fields grouping on "word"
+        builder.setBolt("alert-bolt", new AlertBolt(), loader.getIntProperty("topology.parallelism.alerter"))
+                .shuffleGrouping("split-bolt");
 
         // 7. General Topo Config
         Config config = new Config();
