@@ -57,7 +57,7 @@ public class ParagraphProducer {
                 System.out.println("Produced from file: " + message);
 
                 // Delay to simulate streaming (currently set to 10 seconds)
-                Thread.sleep(3000);
+                Thread.sleep(1);
             }
         } catch (InterruptedException e) {
             System.out.println("Producer interrupted. Shutting down...");

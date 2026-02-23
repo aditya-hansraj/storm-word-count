@@ -28,7 +28,7 @@ public class WordCountTopology {
         );
 
         // 4. Register the Spout (Parallelism = 1)
-        builder.setSpout("kafka-spout", new KafkaSpout<>(spoutConfig), 1);
+        builder.setSpout("kafka-spout", new KafkaSpout<>(spoutConfig), loader.getIntProperty("topology.parallelism.spout"));
 
         // 5. Register the Split Bolt (Parallelism from config)
         builder.setBolt("split-bolt", new SplitBolt(), loader.getIntProperty("topology.parallelism.splitter"))
@@ -49,6 +49,12 @@ public class WordCountTopology {
         config.put("storm.metricstore.rocksdb.path", "/tmp/storm_rocksdb");
         // This line specifically tells Nimbus NOT to start the database
         config.put("storm.metricstore.rocksdb.create_if_missing", "false");
+        // In production, you'd have one acker per worker process
+        config.setNumAckers(1);
+        // How long a tuple tree has to complete before it's considered a failure
+        config.setMessageTimeoutSecs(30);
+        // Max number of tasks that can wait in the spout's queue
+        config.setMaxSpoutPending(100);
 
         // IMPORTANT: LocalCluster sometimes needs this on Mac to avoid port conflicts
         config.put(Config.TOPOLOGY_DEBUG, false);

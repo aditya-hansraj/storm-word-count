@@ -14,34 +14,25 @@ import java.util.Map;
 
 public class SplitBolt extends BaseRichBolt {
     private OutputCollector outputCollector;
-    private transient ObjectMapper objectMapper;
-
     @Override
     public void prepare(Map topoConf, TopologyContext context, OutputCollector collector) {
         this.outputCollector = collector;
-        this.objectMapper = new ObjectMapper();
     }
 
     @Override
     public void execute(Tuple input) {
-        String json = input.getStringByField("value");
-
         try {
-            JsonNode root = objectMapper.readTree(json);
-            String paragraph = root.get("text").asText();
-
+            String paragraph = input.getStringByField("value");
             String[] words = paragraph.toLowerCase().split("\\W+");
 
             for(String word : words) {
                 if (!word.isEmpty()) {
-                    Values values = new Values(word);
-                    outputCollector.emit(input, values);
+                    outputCollector.emit(input, new Values(word));
                 }
             }
             System.out.println("----------------------------------------------------------");
             outputCollector.ack(input);
         } catch (Exception e) {
-            System.err.println("Failed to parse JSON: " + json);
             outputCollector.fail(input);
         }
     }
